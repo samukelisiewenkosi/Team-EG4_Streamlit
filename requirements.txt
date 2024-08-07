@@ -3,3 +3,4 @@ joblib
 matplotlib
 pandas
 numpy
+scikit-surprise

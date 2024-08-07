@@ -1,58 +1,75 @@
 import streamlit as st
 
 # Import pages
-from pages import   user_guide ,classifier01 ,FAQs ,creator_info ,teams
+from pages import genre_recomender, tittle_recomender, user_guide, top_rated_anime, classifier01, Teams, EDA, FAQs
 
 # Define the main app function
 def main():
     st.sidebar.title("Navigation")
-    page = st.sidebar.selectbox("Go to", ["Home", "user_guide", "classifier01","FAQs","creator_info"])
+    page = st.sidebar.selectbox("Go to", ['Home', 'user_guide', 'classifier01', 'genre_recomender', 'tittle_recomender', 'top_rated_anime', 'EDA', 'Teams', 'FAQs'])
 
     if page == "Home":
         home()
     elif page == "user_guide":
         user_guide.app()
-    elif page == "classsifier01":
+    elif page == "classifier01":
         classifier01.app()
+    elif page == "EDA":
+        EDA.app()
     elif page == "FAQs":
         FAQs.app()
-    elif page == "creator_info":
-        creator_info.app()
-    
-    
+    elif page == "Teams":
+        Teams.app()
+    elif page == "tittle_recomender":
+        tittle_recomender.app()
+    elif page == "genre_recomender":
+        genre_recomender.app()
+    elif page == "top_rated_anime":
+        top_rated_anime.app()
+
 def home():
-    #st.title("Welcome to the Anime Recommender System")
-    
     # Custom CSS for styling
     st.markdown("""
     <style>
         .main {
             background-color: #f5f5f5;  /* Light grey background */
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .header {
             font-size: 36px;
             font-weight: bold;
             color: #FF6347;  /* Tomato color */
             text-align: center;
+            margin-bottom: 20px;
         }
         .description {
             font-size: 18px;
             color: #4682B4;  /* Steel blue color */
+            text-align: center;
+            margin-bottom: 20px;
         }
         .video {
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 1120px; /* 2x of 560px */
-            height: 630px; /* 2x of 315px */
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 20px;
         }
         .feature-list {
             font-size: 16px;
             color: #333;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
         }
     </style>
     """, unsafe_allow_html=True)
-    
+
     st.markdown('<div class="main">', unsafe_allow_html=True)
     st.markdown('<p class="header">Welcome to the Anime Recommender System</p>', unsafe_allow_html=True)
     
@@ -62,9 +79,9 @@ def home():
     </p>
     """, unsafe_allow_html=True)
 
-    # Add a video from YouTube
+    # Add a new video from YouTube
     st.markdown("""
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ih2reyE8xgM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2vC47yfKMdg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
     """, unsafe_allow_html=True)
 
     st.markdown("""
