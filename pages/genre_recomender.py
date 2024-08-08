@@ -1,6 +1,8 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
+import pickle
 
 # Load the pickled files
 vectorizer = joblib.load('C:/Users/samuk/Desktop/Team-EG4_Streamlit/tfidf_vectorizer.pkl')
