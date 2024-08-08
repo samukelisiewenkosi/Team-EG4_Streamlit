@@ -5,3 +5,4 @@ pandas
 numpy
 scikit-surprise
 seaborn
+wordcloud
