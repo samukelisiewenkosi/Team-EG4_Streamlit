@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import os
+import pickle
 
 # Load the pickled files
 anime_data = pd.read_pickle('C:/Users/samuk/Desktop/Team-EG4_Streamlit/anime_data.pkl')
