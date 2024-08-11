@@ -5,8 +5,8 @@ import os
 import pickle
 
 # Load the pickled files
-vectorizer = joblib.load('C:/Users/samuk/Desktop/EG4stream/tfidf_vectorizer.pkl')
-anime_data = pd.read_pickle('C:/Users/samuk/Desktop/EG4stream/anime_data.pkl')
+vectorizer = joblib.load('C:/Users/samuk/Desktop/Team-EG4_Streamlit/tfidf_vectorizer.pkl')
+anime_data = pd.read_pickle('C:/Users/samuk/Desktop/Team-EG4_Streamlit/anime_data.pkl')
 
 def recommend_anime_by_genre(selected_genre, top_n=10):
     # Filter anime based on selected genre

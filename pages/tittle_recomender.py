@@ -9,7 +9,7 @@ import pickle
 # Load the dataset
 def load_data():
     # Ensure the correct path and file name
-    anime_df = pd.read_csv('C:/Users/samuk/Desktop/EG4stream/anime.csv', encoding='latin1')
+    anime_df = pd.read_csv('C:/Users/samuk/Desktop/Team-EG4_Streamlit/anime.csv', encoding='latin1')
     return anime_df
 
 # Load datasets
